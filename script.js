@@ -161,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
       once: true
     });
   }
+});    
 
   // Horizontal Scroll Controls for Random Pics
   const scroller = document.getElementById('hall-of-fame-scroller');

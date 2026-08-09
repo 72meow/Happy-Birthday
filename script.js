@@ -150,4 +150,27 @@ document.addEventListener('DOMContentLoaded', function() {
         animate();
     }
 });
+// Initialize AOS Animations safely
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof aos !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  }
 
+  // Horizontal Scroll Controls for Random Pics
+  const scroller = document.getElementById('hall-of-fame-scroller');
+  const leftBtn = document.getElementById('scroll-left-btn');
+  const rightBtn = document.getElementById('scroll-right-btn');
+
+  if (scroller && leftBtn && rightBtn) {
+    leftBtn.addEventListener('click', () => {
+      scroller.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+
+    rightBtn.addEventListener('click', () => {
+      scroller.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+  }
+});

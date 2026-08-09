@@ -149,7 +149,10 @@ document.addEventListener('DOMContentLoaded', function() {
         createPetals();
         animate();
     }
-});
+
+
+
+
 // Initialize AOS Animations safely
 document.addEventListener("DOMContentLoaded", function () {
   if (typeof aos !== 'undefined') {
